@@ -1,0 +1,19 @@
+Test-Command: qrcode "hello, world" | zbarimg -
+Depends:
+ go-qrcode,
+ zbar-tools,
+Restrictions: allow-stderr
+
+Test-Command: echo "test" | qrencode -o - | zbarimg -
+Depends:
+ qrencode,
+ zbar-tools,
+Restrictions: allow-stderr
+
+# SVG requires libmagickcore-6-q16-6-extra
+# See https://bugs.debian.org/995362
+Test-Command: echo "test" | zint --direct --filetype=PNG -i - | zbarimg -
+Depends:
+ zbar-tools,
+ zint,
+Restrictions: allow-stderr

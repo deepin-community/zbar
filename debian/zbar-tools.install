@@ -1,0 +1,5 @@
+#!/usr/bin/dh-exec
+[linux-any] usr/bin/zbarcam
+usr/bin/zbarimg
+etc/dbus-1/system.d/org.linuxtv.Zbar.conf
+usr/share/locale/*/*/zbar.mo
