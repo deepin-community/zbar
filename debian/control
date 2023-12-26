@@ -6,7 +6,9 @@ Build-Depends:
  debhelper-compat (= 13),
  dh-exec,
  dh-sequence-python3,
+ gobject-introspection,
  libdbus-1-dev,
+ libgirepository1.0-dev,
  libgtk-3-dev,
  libjpeg-dev,
  libmagick++-dev,
@@ -19,7 +21,7 @@ Build-Depends:
  qtbase5-dev,
  xmlto,
 Rules-Requires-Root: no
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Homepage: https://github.com/mchehab/zbar
 Vcs-Git: https://salsa.debian.org/debian/zbar.git
 Vcs-Browser: https://salsa.debian.org/debian/zbar
@@ -27,7 +29,6 @@ Vcs-Browser: https://salsa.debian.org/debian/zbar
 Package: libbarcode-zbar-perl
 Section: perl
 Architecture: any
-Multi-Arch: same
 Depends:
  ${misc:Depends},
  ${perl:Depends},
@@ -47,6 +48,7 @@ Depends:
  libmagick++-dev,
  libx11-dev,
  libzbar0 (= ${binary:Version}),
+ gir1.2-zbar-1.0 (= ${binary:Version}),
  ${misc:Depends},
 Description: QR code / bar code scanner and decoder (development)
  ZBar is a library for scanning and decoding bar codes from various sources
@@ -140,10 +142,6 @@ Package: python3-zbar
 Section: python
 Architecture: any
 Multi-Arch: same
-Replaces:
- python-zbarpygtk (<< 0.10+doc),
-Breaks:
- python-zbarpygtk (<< 0.10+doc),
 Depends:
  libzbar0 (= ${binary:Version}),
  ${misc:Depends},
@@ -175,6 +173,7 @@ Description: QR code / bar code scanner and decoder (utilities)
  and using a video4linux device (e.g. webcam) as a bar code scanner.
 
 Package: zbarcam-gtk
+Section: utils
 Architecture: linux-any
 Depends:
  libzbargtk0 (= ${binary:Version}),
@@ -188,6 +187,7 @@ Description: QR code / bar code scanner and decoder (Gtk camera tool)
  This package contains the Gtk-based camara frontend tool.
 
 Package: zbarcam-qt
+Section: utils
 Architecture: linux-any
 Depends:
  libzbarqt0 (= ${binary:Version}),
@@ -199,3 +199,19 @@ Description: QR code / bar code scanner and decoder (Qt camera tool)
  EAN-13/UPC-A, UPC-E, EAN-8, Code 128, Code 39, Interleaved 2 of 5 and QR Code.
  .
  This package contains the Qt-based camara frontend tool.
+
+Package: gir1.2-zbar-1.0
+Section: introspection
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${gir:Depends},
+ ${misc:Depends},
+Description: QR code / bar code scanner and decoder (introspection data)
+ ZBar is a library for scanning and decoding bar codes from various sources
+ such as video streams, image files or raw intensity sensors. It supports
+ EAN-13/UPC-A, UPC-E, EAN-8, Code 128, Code 39, Interleaved 2 of 5 and QR Code.
+ .
+ This package contains the GObject introspection data which are needed
+ for developing the zbar library in various programming languages
+ with GObject introspection support.

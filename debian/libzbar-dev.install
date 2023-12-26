@@ -11,3 +11,4 @@
 /usr/lib/*/libzbar.a
 /usr/lib/*/libzbar.so
 /usr/lib/*/pkgconfig/zbar.pc
+/usr/share/gir-1.0/ZBar-1.0.gir
