@@ -1,3 +1,54 @@
+zbar (0.23.92-9) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Fix two security bug (Closes: #1051724):
+    - Fix CVE-2023-40889: A heap-based buffer overflow existed
+      in the qr_reader_match_centers function.
+      Specially crafted QR codes may lead to information disclosure
+      and/or arbitrary code execution. To trigger this
+      vulnerability, an attacker can digitally input the
+      malicious QR code, or prepare it to be physically scanned
+      by the vulnerable scanner.
+    - Fix CVE-2023-40890: A stack overflow was present in lookup_sequence
+      function of ZBar 0.23.90. Specially crafted QR codes may lead
+      to information disclosure and/or arbitrary code execution.
+      To trigger this vulnerability, an attacker can digitally input
+      the malicious QR code, or prepare it to be physically scanned
+      by the vulnerable scanner.
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 30 Nov 2023 11:19:08 +0000
+
+zbar (0.23.92-8) unstable; urgency=medium
+
+  * debian/control: Mark package zbarcam-gtk and zbarcam-qt as in
+    Section: utils. (Closes: #1042472)
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 30 Jul 2023 10:28:31 -0400
+
+zbar (0.23.92-7) unstable; urgency=high
+
+  * debian/patches/0002: Add proposed patch to fix build against
+    python3.11.
+  * debian/control: Bump Standards-Version to 4.6.2.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 04 Jan 2023 10:42:37 -0500
+
+zbar (0.23.92-6) unstable; urgency=medium
+
+  * debian/control: Bump Standards-Version to 4.6.1.
+  * Source-only upload.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 14 Jul 2022 10:03:36 -0400
+
+zbar (0.23.92-5) unstable; urgency=medium
+
+  * debian/rules: Drop completed dbgsym migration.
+  * Enable gobject-introspection build:
+    + Add build-dep on gobject-introspection and libgirepository1.0-dev.
+    + Add new binary package: gir1.2-zbar-1.0. (Closes: #1014226)
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 03 Jul 2022 04:52:23 -0400
+
 zbar (0.23.92-4) unstable; urgency=medium
 
   * Bump Standards-Version to 4.6.0.
