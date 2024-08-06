@@ -12,7 +12,10 @@ export DEB_LDFLAGS_MAINT_APPEND =
 
 # Introduce standard debhelper variables
 DPKG_EXPORT_BUILDFLAGS = 1
+DPKG_EXPORT_BUILDTOOLS = 1
 include /usr/share/dpkg/default.mk
+# Use correct PKG_CONFIG in configure.ac
+include /usr/share/dpkg/buildtools.mk
 
 # Let pybuild know the python binary package name
 export PYBUILD_NAME = zbar

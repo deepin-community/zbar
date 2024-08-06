@@ -1,4 +1,3 @@
 0001-Properly-set-perl-script-shebang.patch
-0002-python-enum-fix-build-for-Python-3.11.patch
-0003-CVE-2023-40889-qrdec.c-Fix-array-out-of-bounds-acces.patch
-0004-Add-bounds-check-for-CVE-2023-40890.patch
+0002-configure.ac-Do-not-use-hardcoded-pkg-config-command.patch
+0003-configure.ac-Use-old-way-to-detect-Qt5.patch

@@ -1,4 +1,4 @@
-libzbar.so.0 libzbar0 #MINVER#
+libzbar.so.0 libzbar0t64 #MINVER#
 * Build-Depends-Package: libzbar-dev
  _zbar_error_spew@Base 0.10
  _zbar_error_string@Base 0.10

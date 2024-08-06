@@ -1,3 +1,54 @@
+zbar (0.23.93-5) sid; urgency=medium
+
+  * Uploading to sid.
+  * Adding vcs fields.
+  * Updating to standards-version 4.7.0.
+
+ -- Daniel Baumann <daniel.baumann@progress-linux.org>  Thu, 25 Jul 2024 06:55:52 +0200
+
+zbar (0.23.93-4) sid; urgency=medium
+
+  * Uploading to sid.
+  * New "old" maintainer (Closes: #1065691).
+
+ -- Daniel Baumann <daniel.baumann@progress-linux.org>  Sat, 09 Mar 2024 01:07:08 +0100
+
+zbar (0.23.93-3) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 08 Mar 2024 19:01:57 -0500
+
+zbar (0.23.93-2) unstable; urgency=medium
+
+  * debian/control: Update binary package recommendation:
+    libmagickcore-6.q16-7-extra => libmagickcore-6.q16-7-extra.
+    (Closes: #1064582)
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 29 Feb 2024 14:23:14 -0500
+
+zbar (0.23.93-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1063306
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 29 Feb 2024 08:15:04 +0000
+
+zbar (0.23.93-1) unstable; urgency=medium
+
+  * Acknowledge NMU.
+  * New upstream release.
+  * debian/patches/: Drop patches 0002-0004, merged upstream.
+  * debian/rules: Use buildtools.mk from dpkg for correct PKG_CONFIG.
+  * debian/patches/:
+    + 0002-configure.ac-Do-not-use-hardcoded-pkg-config-command.patch:
+      Use $PKG_CONFIG instead of hardcoded pkg-config command.
+    + 0003-configure.ac-Use-old-way-to-detect-Qt5.patch:
+      Revert to old method of detecting Qt5.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 10 Jan 2024 10:57:46 -0500
+
 zbar (0.23.92-9) unstable; urgency=high
 
   * Non-maintainer upload.
