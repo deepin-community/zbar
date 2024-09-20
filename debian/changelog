@@ -1,3 +1,9 @@
+zbar (0.23.92-9deepin1deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Fri, 20 Sep 2024 12:59:19 +0800
+
 zbar (0.23.92-9deepin1) unstable; urgency=medium
 
   * No source change upload against python 3.12.
