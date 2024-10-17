@@ -1,0 +1,13 @@
+--- debian/changelog
++++ debian/changelog
+@@ -1,10 +1,3 @@
+-zbar (0.23.93-1.1) unstable; urgency=medium
+-
+-  * Non-maintainer upload.
+-  * Rename libraries for 64-bit time_t transition.  Closes: #1063306
+-
+- -- Steve Langasek <vorlon@debian.org>  Thu, 29 Feb 2024 08:15:04 +0000
+-
+ zbar (0.23.93-1) unstable; urgency=medium
+ 
+   * Acknowledge NMU.
