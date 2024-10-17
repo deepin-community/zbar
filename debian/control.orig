@@ -47,7 +47,7 @@ Multi-Arch: same
 Depends:
  libmagick++-dev,
  libx11-dev,
- libzbar0 (= ${binary:Version}),
+ libzbar0t64 (= ${binary:Version}),
  gir1.2-zbar-1.0 (= ${binary:Version}),
  ${misc:Depends},
 Description: QR code / bar code scanner and decoder (development)
@@ -57,7 +57,10 @@ Description: QR code / bar code scanner and decoder (development)
  .
  This package contains the development files.
 
-Package: libzbar0
+Package: libzbar0t64
+Provides: ${t64:Provides}
+Replaces: libzbar0
+Breaks: libzbar0 (<< ${source:Version})
 Architecture: any
 Multi-Arch: same
 Pre-Depends:
@@ -82,7 +85,7 @@ Multi-Arch: same
 Depends:
  libgtk-3-dev,
  libzbar-dev (= ${binary:Version}),
- libzbargtk0 (= ${binary:Version}),
+ libzbargtk0t64 (= ${binary:Version}),
  ${misc:Depends},
 Description: QR code / bar code scanner and decoder (GTK+ bindings development)
  ZBar is a library for scanning and decoding bar codes from various sources
@@ -91,13 +94,16 @@ Description: QR code / bar code scanner and decoder (GTK+ bindings development)
  .
  This package contains the development files for the GTK+ bindings.
 
-Package: libzbargtk0
+Package: libzbargtk0t64
+Provides: ${t64:Provides}
+Replaces: libzbargtk0
+Breaks: libzbargtk0 (<< ${source:Version})
 Architecture: any
 Multi-Arch: same
 Pre-Depends:
  ${misc:Pre-Depends},
 Depends:
- libzbar0 (= ${binary:Version}),
+ libzbar0t64 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Description: QR code / bar code scanner and decoder (GTK+ bindings)
@@ -114,7 +120,7 @@ Multi-Arch: same
 Depends:
  libqt5x11extras5-dev,
  libzbar-dev (= ${binary:Version}),
- libzbarqt0 (= ${binary:Version}),
+ libzbarqt0t64 (= ${binary:Version}),
  qtbase5-dev,
  ${misc:Depends},
 Description: QR code / bar code scanner and decoder (Qt binding development)
@@ -124,11 +130,14 @@ Description: QR code / bar code scanner and decoder (Qt binding development)
  .
  This package contains the development files for the Qt binding.
 
-Package: libzbarqt0
+Package: libzbarqt0t64
+Provides: ${t64:Provides}
+Replaces: libzbarqt0
+Breaks: libzbarqt0 (<< ${source:Version})
 Architecture: any
 Multi-Arch: same
 Depends:
- libzbar0 (= ${binary:Version}),
+ libzbar0t64 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Description: QR code / bar code scanner and decoder (Qt binding)
@@ -143,7 +152,7 @@ Section: python
 Architecture: any
 Multi-Arch: same
 Depends:
- libzbar0 (= ${binary:Version}),
+ libzbar0t64 (= ${binary:Version}),
  ${misc:Depends},
  ${python3:Depends},
  ${shlibs:Depends},
@@ -158,7 +167,7 @@ Package: zbar-tools
 Section: graphics
 Architecture: any
 Depends:
- libzbar0 (= ${binary:Version}),
+ libzbar0t64 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Suggests:
@@ -176,7 +185,7 @@ Package: zbarcam-gtk
 Section: utils
 Architecture: linux-any
 Depends:
- libzbargtk0 (= ${binary:Version}),
+ libzbargtk0t64 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Description: QR code / bar code scanner and decoder (Gtk camera tool)
@@ -190,7 +199,7 @@ Package: zbarcam-qt
 Section: utils
 Architecture: linux-any
 Depends:
- libzbarqt0 (= ${binary:Version}),
+ libzbarqt0t64 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Description: QR code / bar code scanner and decoder (Qt camera tool)
